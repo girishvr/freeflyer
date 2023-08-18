@@ -1,5 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 
+import {Flyer} from './utils/Data';
+import { styles } from "./utils/Styles";
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -10,9 +13,8 @@ import 'swiper/css/effect-cards';
 // import required modules
 import { EffectCards } from 'swiper/modules';
 
-import { StyleSheet, Text, View, Dimensions, Image, Animated, PanResponder } from 'react-native';
+import { Text, View, Dimensions, Image, Animated, PanResponder } from 'react-native';
 import React, {useRef} from 'react';
-
 
 const SCREEN_HEIGHT = Dimensions.get('window').height
 const SCREEN_WIDTH = Dimensions.get('window').width
@@ -78,81 +80,5 @@ export default function App() {
 
 
 {/*<Image style={styles.image} source={item.uri} />*/}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'ivory',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-
-  //* Swiper
-  cardContainer:{
-    flex: 1,
-    height: SCREEN_HEIGHT,
-    width: SCREEN_WIDTH -20 ,    
-    backgroundColor: 'silver',
-    padding: 10,
-
-  },
-
-  //* SwiperSlide
-  cardView:{
-    backgroundColor: '#fff',
-    height: SCREEN_HEIGHT - 60,
-    width: SCREEN_WIDTH - 80, // *Redundant - since we are using slidePerView = 1 *//
-    // padding: 50,
-    // position:'absolute',
-    resizeMode: "cover",
-    borderRadius: 15,
-    // alignItems: 'center',
-    // justifyContent: 'center',  
-    // minimumVelocity: 0.1
-
-  },
-
-  //* flex view on which all the eliments are placed and background color is applied
-  innerView:{
-    // backgroundColor: '#f0f',
-    // alignItems: 'center',
-    // justifyContent: 'center', 
-    display: "flex",
-    height: "100%",
-    borderRadius: 15,
-
-
-  },
-
-  messageTitleText:{
-    fontWeight:'bold',
-    textAlign:'center',
-    fontSize:20,
-    marginBottom:20,
-    marginTop:20,
-  },
-
-  messageBodyText:{
-    textAlign:'center',
-    fontSize:18,
-    marginBottom:20,
-    marginTop:20,
-  },
-
-  
-});
-
-
-const Flyer = [
-  { id: "1", uri: require('./assets/img0.png'), color:"#FD3A73", title:"Hi", bulletin:"How are you rdoing?" },
-  { id: "2", uri: require('./assets/img1.jpeg'), color:"#424242", title:"Hello", bulletin:"How is it going on?" },
-  { id: "3", uri: require('./assets/img2.png'), color:"#FD3A73", title:"Hey", bulletin:"You look awesome!" },
-  { id: "4", uri: require('./assets/img3.jpeg'), color:"green", title:"Hola", bulletin:"What is up?" },
-  { id: "5", uri: require('./assets/img4.jpeg'), color:"#424242", title:"Yello", bulletin:"What good in the woods?" },
-]
-
-
-
-
 
 

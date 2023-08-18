@@ -1,0 +1,79 @@
+// Styles.js
+// App wide style set here
+
+
+import {StyleSheet, Dimensions} from 'react-native';
+
+
+const SCREEN_HEIGHT = Dimensions.get('window').height
+const SCREEN_WIDTH = Dimensions.get('window').width
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: 'ivory',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
+  //* Swiper
+  cardContainer:{
+    flex: 1,
+    height: SCREEN_HEIGHT,
+    width: SCREEN_WIDTH -20 ,    
+    backgroundColor: 'silver',
+    padding: 10,
+    backgroundColor: '#ff7979', //'#eb4d4b',
+
+  },
+
+  //* SwiperSlide
+  cardView:{
+    backgroundColor: '#c7ecee',
+    height: SCREEN_HEIGHT - 60,
+    width: SCREEN_WIDTH - 80, // *Redundant - since we are using slidePerView = 1 *//
+    // padding: 50,
+    // position:'absolute',
+    resizeMode: "cover",
+    borderRadius: 15,
+    // alignItems: 'center',
+    // justifyContent: 'center',  
+    // minimumVelocity: 0.1
+
+  },
+
+  //* flex view on which all the eliments are placed and background color is applied
+  innerView:{
+    // backgroundColor: '#f0f',
+    // alignItems: 'center',
+    // justifyContent: 'center', 
+    display: "flex",
+    height: "100%",
+    borderRadius: 15,
+
+  },
+
+  messageTitleText:{
+    fontWeight:'bold',
+    textAlign:'center',
+    fontSize:20,
+    marginBottom:20,
+    marginTop:20,
+    color: "black",
+    fontFamily: 'monospace', //'Academy Engraved LET',
+  },
+
+  messageBodyText:{
+    textAlign:'center',
+    fontSize:18,
+    marginBottom:20,
+    marginTop:20,
+    color: "black",
+    fontFamily: 'monospace', //'Academy Engraved LET',
+  },
+
+  
+});
+
+
+export{ styles }
