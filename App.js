@@ -16,10 +16,47 @@ import { EffectCards } from 'swiper/modules';
 import { Text, View, Dimensions, Image, Animated, PanResponder } from 'react-native';
 import React, {useRef} from 'react';
 
+
+import { useState } from 'react';
+
+
+
+
+
+
 const SCREEN_HEIGHT = Dimensions.get('window').height
 const SCREEN_WIDTH = Dimensions.get('window').width
 
 export default function App() {
+
+
+  const [lat, setLat] = useState(null);
+  const [long, setLong] = useState(null);
+  const [error, setError] = useState("");
+  const geolocationAPI = navigator.geolocation;
+
+  const getUserCoordinates = () => {
+    if (!geolocationAPI) {
+      console.log('Geolocation API is not available in your browser!')
+      setError('Geolocation API is not available in your browser!')
+    } else {
+      geolocationAPI.getCurrentPosition((position) => {
+        const { coords } = position;
+        setLat(coords.latitude);
+        setLong(coords.longitude);
+        console.log('Latitude and Longitude');
+        console.log({lat, long});
+
+      }, (error) => {
+        console.log('Something went wrong getting your position!')
+        setError('Something went wrong getting your position!')
+      })
+    }
+  }
+
+  getUserCoordinates();
+  console.log('Latitude and Longitude');
+  console.log({lat, long});
 
   const pan = useRef(new Animated.ValueXY()).current;
 
@@ -64,6 +101,12 @@ export default function App() {
               <View>
                 <Text style={styles.messageBodyText}>{item.bulletin}</Text>
               </View>
+               
+
+               <View>
+                <Text style={styles.messageBodyText}><p>Your coordinates are: {lat} {long}</p> </Text>
+              </View>
+              
 
             </View>
 
