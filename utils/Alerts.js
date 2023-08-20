@@ -58,13 +58,14 @@ import './App.css';
       text: 'Please enter a valid phone number',
       icon: 'warning',
       showConfirmButton: false,
-      // timer: 3000,
+      timer: 2000,
+
       customClass:{
-        title: 'sweet_titleImportant',
-        // header: 'sweet_titleImportant',
-        container: 'sweet_titleImportant',
-        // validationMessage: 'sweet_titleImportant',
-        // footer: 'sweet_titleImportant',
+        title: 'sweet_title',
+        // header: 'sweet_title',
+        // container: 'sweet_title',
+        // validationMessage: 'sweet_title',
+        popup: 'sweet_container',
         
       }
     }); 
@@ -76,10 +77,11 @@ import './App.css';
       icon: 'success',
       title: 'Your log in completed',
       showConfirmButton: false,
-      // timer: 1500,
+      timer: 1500,
       customClass:{
-        title: 'sweet_messageImportant',
-        header: 'sweet_messageImportant',
+        title: 'sweet_title',
+        header: 'sweet_title',
+        popup: 'sweet_container',
       }
     });
   }

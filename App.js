@@ -2,7 +2,8 @@ import * as React from 'react';
 import { Text, View, Pressable, TextInput } from 'react-native';
 
 
-import {NavigationContainer} from '@react-navigation/native';
+import {NavigationContainer, useNavigation} from '@react-navigation/native';
+
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import {FlyerScreen} from './Screens/Flyers.js';
@@ -12,14 +13,15 @@ import {alertType, FreeAlerts} from './utils/Alerts';
 
 const Stack = createNativeStackNavigator();
 
+
 export default function App(){
   return (
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
-          name="Home"
+          name="Free Flyers"
           component={HomeScreen}
-          options={{headerShown: false}}
+          options={{headerShown: true}}
         />
         <Stack.Screen 
         name="Flyer" 
@@ -37,6 +39,8 @@ const HomeScreen = ({navigation}) => {
   console.log('Home Screen Called');
 
   const [number, onChangeNumber] = React.useState('');
+
+  const location = "";
 
   // Location operation
 
@@ -68,6 +72,52 @@ const HomeScreen = ({navigation}) => {
     getUserCoordinates();
   }
 
+  // To fix the recursive call to on press without pressing the button
+  // onPress={() => this.props.navigation.navigate('Home')}
+  // {() => navigate('loginCheck', { number: number })}
+  // {() => { loginCheck(number)}}
+
+  const loginUser = (number) => {
+    //use navigation hook shown as below
+    // const navigation = useNavigation();
+
+    console.log("Check and log in user");    
+    FreeAlerts(alertType.Success);
+    navigation.navigate('Flyer');
+   }
+
+
+  const loginCheck = (number) => {
+    console.log(number);
+    
+    let num = number.replace(".", '');
+
+    if(isNaN(num)){
+       // It's not a number
+      FreeAlerts(alertType.InvalidInput);
+    }else{
+      if (checkPhone(num)){
+        loginUser(num);
+      }else{
+        FreeAlerts(alertType.InvalidInput);
+      }
+    }      
+
+  } 
+
+
+  // validate phone number length between 10-14
+  // 12345-12340 and 1234512345 both work as expected
+
+  const checkPhone = phoneNumber => {
+    if (!/(^\d{10,14}$)|(^\d{5}-\d{4}$)/.test(phoneNumber)) {
+      return false;
+    }
+    return true
+  };
+
+
+
   return (
 
     <View style={styles.container}>
@@ -84,7 +134,7 @@ const HomeScreen = ({navigation}) => {
         keyboardType='phone-pad'
       />
 
-      <Pressable style={styles.button} onPress={() => { loginCheck(number)}}>
+      <Pressable style={styles.button} onPress={() => {loginCheck(number)}}>
         <Text style={styles.text}>Get Flyers</Text>
       </Pressable>
 
@@ -94,36 +144,11 @@ const HomeScreen = ({navigation}) => {
       
     </View>
 
-    
   );
-};
-
-// To fix the recursive call to on press without pressing the button
-// onPress={() => this.props.navigation.navigate('Home')}
 
 
-const loginUser = (number) => {
-  console.log("Check and log in user");
-  // FreeAlerts(alertType.InvalidInput);
-  //navigation.navigate('Flyer');
-  // FreeAlerts(alertType.Success);
- }
 
-
-const loginCheck = (number) => {
-  
-  console.log(number);
-  
-  let num = number.replace(".", '');
-    if(isNaN(num)){
-     // Its not a number
-    FreeAlerts(alertType.InvalidInput);
-  }else{
-    loginUser(num);
-  }      
-
-} 
-
+}; //End of App
 
 
 // const FlyersScreen = ({navigation, route}) => {
