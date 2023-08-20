@@ -11,6 +11,12 @@ import { styles } from "./utils/Styles";
 import { useState } from 'react';
 import {alertType, FreeAlerts} from './utils/Alerts'; 
 
+
+import H from "@here/maps-api-for-javascript";
+const HERE_API_KEY = "jTyIvP7FORzSbxrTjR11jNdScr8fDS8HXLOkObeqRvo"
+const HERE_APP_ID = "TiGEKf1vgpGbsGfZ3sIQ"
+
+
 const Stack = createNativeStackNavigator();
 
 
@@ -19,12 +25,12 @@ export default function App(){
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
-          name="Free Flyers"
+          name="Free Flyers App"
           component={HomeScreen}
           options={{headerShown: true}}
         />
         <Stack.Screen 
-        name="Flyer" 
+        name="Flyers" 
         component={FlyerScreen} 
         options={{headerShown: false}}
         />
@@ -40,9 +46,16 @@ const HomeScreen = ({navigation}) => {
 
   const [number, onChangeNumber] = React.useState('');
 
-  const location = "";
+  const [location, onLocationUpdate] = React.useState('');
 
-  // Location operation
+
+  // const platform = new H.service.Platform({
+  //     apikey: HERE_API_KEY
+  //   });
+  // const layers = platform.createDefaultLayers();
+  // console.log('layers');
+  // console.log(layers);
+  // // Location operation
 
   const [lat, setLat] = useState(null);
   const [long, setLong] = useState(null);
@@ -70,7 +83,63 @@ const HomeScreen = ({navigation}) => {
 
   if (!lat) {
     getUserCoordinates();
+  }else{
+    if (location == ''){
+      // Latitude  21.146633
+      // Longitude 79.088860
+      getLocationFromGeoCordinates(lat,long)
+      
+    }
   }
+
+
+
+  //------ Maps API Geocoding
+
+
+function getLocationFromGeoCordinates(latitude, longitude){
+
+    const url = 'https://revgeocode.search.hereapi.com/v1/revgeocode?apikey='+ HERE_API_KEY + '&at='+ latitude +','+longitude+'&lang=en-US'
+    console.log('url - ');
+    console.log(url);
+
+    fetch(url)
+        .then((response) => response.json())
+        .then((json) => {
+            console.log('json --- ');
+
+            const items = json['items']
+            const firstObject = items[0];
+            const add = firstObject['address']
+            const city = add['city']
+
+            console.log('city');
+            console.log(city);
+            
+            if (city != ''){
+              onLocationUpdate(city);
+              console.log('Location');
+              console.log(location);
+            }
+
+
+        })
+        .catch((error) => console.error(error))
+        .finally(() => setLoading(false));
+}
+
+function setLoading(status){
+    console.log('setLoading');
+    console.log(status);
+}
+
+//-----Maps API Geocoding
+
+
+
+
+
+
 
   // To fix the recursive call to on press without pressing the button
   // onPress={() => this.props.navigation.navigate('Home')}
@@ -140,6 +209,9 @@ const HomeScreen = ({navigation}) => {
 
       <View>
         <Text style={styles.messageBodyText}><p>Your coordinates are: {lat} {long}</p> </Text>
+      </View>
+      <View>
+        <Text style={styles.messageBodyText}><p>Your location: {location}</p> </Text>
       </View>      
       
     </View>
@@ -149,6 +221,8 @@ const HomeScreen = ({navigation}) => {
 
 
 }; //End of App
+
+
 
 
 // const FlyersScreen = ({navigation, route}) => {
