@@ -12,7 +12,7 @@ import { useState } from 'react';
 import {alertType, FreeAlerts} from './utils/Alerts'; 
 
 
-import H from "@here/maps-api-for-javascript";
+// import H from "@here/maps-api-for-javascript";
 const HERE_API_KEY = "jTyIvP7FORzSbxrTjR11jNdScr8fDS8HXLOkObeqRvo"
 const HERE_APP_ID = "TiGEKf1vgpGbsGfZ3sIQ"
 
@@ -49,17 +49,31 @@ const HomeScreen = ({navigation}) => {
   const [location, onLocationUpdate] = React.useState('');
 
 
-  // const platform = new H.service.Platform({
-  //     apikey: HERE_API_KEY
-  //   });
-  // const layers = platform.createDefaultLayers();
-  // console.log('layers');
-  // console.log(layers);
-  // // Location operation
-
   const [lat, setLat] = useState(null);
   const [long, setLong] = useState(null);
   const [error, setError] = useState("");
+
+
+// var successHandler = function(position) { 
+//   alert(position.coords.latitude); 
+//   alert(position.coords.longitude); 
+// }; 
+
+// var errorHandler = function (errorObj) { 
+//   alert(errorObj.code + ": " + errorObj.message); 
+
+//   alert("something wrong take this lat " + 26.0546106 ); 
+//   alert("something wrong take this lng " +-98.3939791); 
+
+// }; 
+// function getLocation(){
+//     navigator.geolocation.getCurrentPosition( 
+//     successHandler, errorHandler, 
+//     {enableHighAccuracy: true, maximumAge: 10000});
+// }
+  // getLocation()
+
+
   const geolocationAPI = navigator.geolocation;  
 
   const getUserCoordinates = () => {
@@ -93,33 +107,24 @@ const HomeScreen = ({navigation}) => {
   }
 
 
-
   //------ Maps API Geocoding
 
 
 function getLocationFromGeoCordinates(latitude, longitude){
 
     const url = 'https://revgeocode.search.hereapi.com/v1/revgeocode?apikey='+ HERE_API_KEY + '&at='+ latitude +','+longitude+'&lang=en-US'
-    console.log('url - ');
-    console.log(url);
-
+    
     fetch(url)
         .then((response) => response.json())
         .then((json) => {
-            console.log('json --- ');
 
             const items = json['items']
             const firstObject = items[0];
             const add = firstObject['address']
             const city = add['city']
-
-            console.log('city');
-            console.log(city);
             
             if (city != ''){
               onLocationUpdate(city);
-              console.log('Location');
-              console.log(location);
             }
 
 
@@ -134,8 +139,6 @@ function setLoading(status){
 }
 
 //-----Maps API Geocoding
-
-
 
 
 
@@ -157,7 +160,6 @@ function setLoading(status){
 
 
   const loginCheck = (number) => {
-    console.log(number);
     
     let num = number.replace(".", '');
 
@@ -212,7 +214,7 @@ function setLoading(status){
       </View>
       <View>
         <Text style={styles.messageBodyText}><p>Your location: {location}</p> </Text>
-      </View>      
+      </View>         
       
     </View>
 
@@ -221,8 +223,6 @@ function setLoading(status){
 
 
 }; //End of App
-
-
 
 
 // const FlyersScreen = ({navigation, route}) => {
