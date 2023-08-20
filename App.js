@@ -17,7 +17,7 @@ export default function App(){
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
-          name="App"
+          name="Home"
           component={HomeScreen}
           options={{headerShown: false}}
         />
@@ -33,6 +33,8 @@ export default function App(){
 
 
 const HomeScreen = ({navigation}) => {
+
+  console.log('Home Screen Called');
 
   const [number, onChangeNumber] = React.useState('');
 
@@ -79,9 +81,10 @@ const HomeScreen = ({navigation}) => {
         maxLength={10}
         placeholder="Phone Number"
         inputMode="numeric"
+        keyboardType='phone-pad'
       />
 
-      <Pressable style={styles.button} onPress={loginUser}>
+      <Pressable style={styles.button} onPress={() => { loginCheck(number)}}>
         <Text style={styles.text}>Get Flyers</Text>
       </Pressable>
 
@@ -95,14 +98,32 @@ const HomeScreen = ({navigation}) => {
   );
 };
 
-  const loginUser = (navigation, route) => {
-    console.log("Check and log in user");
-    FreeAlerts(alertType.InvalidInput);
-    //navigation.navigate('Flyer');
-    // FreeAlerts(alertType.Success);
+// To fix the recursive call to on press without pressing the button
+// onPress={() => this.props.navigation.navigate('Home')}
 
-  } 
+
+const loginUser = (number) => {
+  console.log("Check and log in user");
+  // FreeAlerts(alertType.InvalidInput);
+  //navigation.navigate('Flyer');
+  // FreeAlerts(alertType.Success);
+ }
+
+
+const loginCheck = (number) => {
   
+  console.log(number);
+  
+  let num = number.replace(".", '');
+    if(isNaN(num)){
+     // Its not a number
+    FreeAlerts(alertType.InvalidInput);
+  }else{
+    loginUser(num);
+  }      
+
+} 
+
 
 
 // const FlyersScreen = ({navigation, route}) => {
