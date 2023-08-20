@@ -159,6 +159,7 @@ function setLoading(status){
     console.log("Check and log in user");    
     FreeAlerts(alertType.Success);
 
+    //TODO: remove after testing
     if (number == '7887680353' || number == '8104055652'){
       navigation.navigate('Flyers', {isPrivate: FlyerTypes.Private});
     }else{
