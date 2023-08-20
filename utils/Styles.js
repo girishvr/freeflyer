@@ -9,11 +9,60 @@ const SCREEN_HEIGHT = Dimensions.get('window').height
 const SCREEN_WIDTH = Dimensions.get('window').width
 
 const styles = StyleSheet.create({
+
   container: {
     flex: 1,
     backgroundColor: 'ivory',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+
+  pageTitle:{
+    fontWeight:'400',
+    textAlign:'center',
+    fontSize:20,
+    padding:20,
+  },
+
+  input: {
+    height: 40,
+    margin: 12,
+    borderWidth: 0.5,
+    padding: 10,
+  },
+
+  button: {
+    height: 40,
+    margin: 12,
+    borderWidth: 0.5,
+    
+    padding: 20,
+    paddingVertical: 12,
+    paddingHorizontal: 32,
+    borderRadius: 5,
+    elevation: 4,
+
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#ff7979',
+    borderColor: '#ff7979',
+
+
+  },
+
+  text: {
+    fontSize: 16,
+    lineHeight: 21,
+    fontWeight: '400',
+    letterSpacing: 0.25,
+    color: 'white',
+  },
+
+  paragraph:{
+    fontWeight:'400',
+    textAlign:'center',
+    fontSize:18,
+    padding:14,
   },
 
   //* Swiper

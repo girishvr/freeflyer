@@ -13,12 +13,8 @@ import 'swiper/css/effect-cards';
 // import required modules
 import { EffectCards } from 'swiper/modules';
 
-import { Text, View, Dimensions, Image, Animated, PanResponder } from 'react-native';
+import { Text, View, Dimensions, Image, Animated } from 'react-native';
 import React, {useRef} from 'react';
-
-
-import { useState } from 'react';
-
 
 
 
@@ -30,45 +26,18 @@ export const FlyerScreen = ({navigation}) =>{
 // export default function Flyer() {
 
 
-  const [lat, setLat] = useState(null);
-  const [long, setLong] = useState(null);
-  const [error, setError] = useState("");
-  const geolocationAPI = navigator.geolocation;
+  // Depricated by Girish - PanResponder
+  // const pan = useRef(new Animated.ValueXY()).current;
 
-  const getUserCoordinates = () => {
-    if (!geolocationAPI) {
-      console.log('Geolocation API is not available in your browser!')
-      setError('Geolocation API is not available in your browser!')
-    } else {
-      geolocationAPI.getCurrentPosition((position) => {
-        const { coords } = position;
-        setLat(coords.latitude);
-        setLong(coords.longitude);
-        console.log('Latitude and Longitude');
-        console.log({lat, long});
-
-      }, (error) => {
-        console.log('Something went wrong getting your position!')
-        setError('Something went wrong getting your position!')
-      })
-    }
-  }
-
-  getUserCoordinates();
-  console.log('Latitude and Longitude');
-  console.log({lat, long});
-
-  const pan = useRef(new Animated.ValueXY()).current;
-
-  const panResponder = useRef(
-    PanResponder.create({
-      onMoveShouldSetPanResponder: () => true,
-      onPanResponderMove: Animated.event([null, {dx: pan.x, dy: pan.y}]),
-      onPanResponderRelease: () => {
-        pan.extractOffset();
-      },
-    }),
-  ).current;
+  // const panResponder = useRef(
+  //   PanResponder.create({
+  //     onMoveShouldSetPanResponder: () => true,
+  //     onPanResponderMove: Animated.event([null, {dx: pan.x, dy: pan.y}]),
+  //     onPanResponderRelease: () => {
+  //       pan.extractOffset();
+  //     },
+  //   }),
+  // ).current;
   
   return (
     // 
@@ -101,12 +70,7 @@ export const FlyerScreen = ({navigation}) =>{
               <View>
                 <Text style={styles.messageBodyText}>{item.bulletin}</Text>
               </View>
-               
-
-               <View>
-                <Text style={styles.messageBodyText}><p>Your coordinates are: {lat} {long}</p> </Text>
-              </View>
-              
+                              
 
             </View>
 
