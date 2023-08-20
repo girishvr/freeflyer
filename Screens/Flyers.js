@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 
-import {Flyer} from './../utils/Data';
+import {Flyer, LoveNote} from './../utils/Data';
 import { styles } from "./../utils/Styles";
 
 // Import Swiper React components
@@ -21,22 +21,26 @@ import React, {useRef} from 'react';
 const SCREEN_HEIGHT = Dimensions.get('window').height
 const SCREEN_WIDTH = Dimensions.get('window').width
 
-export const FlyerScreen = ({navigation}) =>{
-// export default function Flyer() {
+
+export const FlyerTypes = Object.freeze({
+    Private: 'private',
+    Public: 'public',
+  });
 
 
-  // Depricated by Girish - PanResponder
-  // const pan = useRef(new Animated.ValueXY()).current;
+export const FlyerScreen = (props) =>{
 
-  // const panResponder = useRef(
-  //   PanResponder.create({
-  //     onMoveShouldSetPanResponder: () => true,
-  //     onPanResponderMove: Animated.event([null, {dx: pan.x, dy: pan.y}]),
-  //     onPanResponderRelease: () => {
-  //       pan.extractOffset();
-  //     },
-  //   }),
-  // ).current;
+  //TODO: temporary 
+  console.log(props.route.params.isPrivate);
+  var myFlyers = Flyer;
+  switch(props.route.params.isPrivate){
+    case 'private':
+      myFlyers = LoveNote;
+      break;
+    case 'public':
+      myFlyers = Flyer;
+      break;
+  }
   
   return (
     // 
@@ -57,7 +61,7 @@ export const FlyerScreen = ({navigation}) =>{
         onSwiper={(swiper) => console.log(swiper)}
       >
 
-        {Flyer.map((item) => (
+        {myFlyers.map((item) => (
 
           <SwiperSlide key={item.id} style={styles.cardView} >
            

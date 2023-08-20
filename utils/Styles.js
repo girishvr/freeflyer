@@ -10,6 +10,12 @@ const SCREEN_WIDTH = Dimensions.get('window').width
 
 const styles = StyleSheet.create({
 
+  safeArea:{ 
+    flex: 1, 
+    // justifyContent: 'space-between', 
+    // alignItems: 'center' 
+  },
+
   container: {
     flex: 1,
     backgroundColor: 'ivory',
@@ -70,9 +76,8 @@ const styles = StyleSheet.create({
     flex: 1,
     height: SCREEN_HEIGHT,
     width: SCREEN_WIDTH -20 ,    
-    backgroundColor: 'silver',
     padding: 10,
-    backgroundColor: '#ff7979', //'#eb4d4b',
+    backgroundColor: 'ivory', //'#ff7979', //'#eb4d4b',
 
   },
 
@@ -106,17 +111,18 @@ const styles = StyleSheet.create({
     fontWeight:'bold',
     textAlign:'center',
     fontSize:20,
-    marginBottom:20,
-    marginTop:20,
+    marginBottom:10,
+    marginTop:30,
     color: "black",
     fontFamily: 'monospace', //'Academy Engraved LET',
   },
 
   messageBodyText:{
     textAlign:'center',
-    fontSize:18,
+    fontSize:25,
     marginBottom:20,
     marginTop:20,
+    padding: 30,
     color: "black",
     fontFamily: 'monospace', //'Academy Engraved LET',
   },

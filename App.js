@@ -3,10 +3,11 @@ import { Text, View, Pressable, TextInput } from 'react-native';
 
 
 import {NavigationContainer, useNavigation} from '@react-navigation/native';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
-import {FlyerScreen} from './Screens/Flyers.js';
+import {FlyerScreen, FlyerTypes} from './Screens/Flyers.js';
 import { styles } from "./utils/Styles";
 import { useState } from 'react';
 import {alertType, FreeAlerts} from './utils/Alerts'; 
@@ -22,20 +23,22 @@ const Stack = createNativeStackNavigator();
 
 export default function App(){
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          name="Free Flyers App"
-          component={HomeScreen}
-          options={{headerShown: true}}
-        />
-        <Stack.Screen 
-        name="Flyers" 
-        component={FlyerScreen} 
-        options={{headerShown: false}}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <SafeAreaProvider>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen
+            name="Free Flyers App"
+            component={HomeScreen}
+            options={{headerShown: true}}
+          />
+          <Stack.Screen 
+          name="Flyers" 
+          component={FlyerScreen} 
+          options={{headerShown: false}}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </SafeAreaProvider>  
   );
 };
 
@@ -155,7 +158,13 @@ function setLoading(status){
 
     console.log("Check and log in user");    
     FreeAlerts(alertType.Success);
-    navigation.navigate('Flyer');
+
+    if (number == '7887680353' || number == '8104055652'){
+      navigation.navigate('Flyers', {isPrivate: FlyerTypes.Private});
+    }else{
+      navigation.navigate('Flyers', {isPrivate: FlyerTypes.Public});
+    }
+    
    }
 
 
@@ -190,7 +199,7 @@ function setLoading(status){
 
 
   return (
-
+    <SafeAreaView style={styles.safeArea}>
     <View style={styles.container}>
       <Text style={styles.pageTitle}> Welcome to Free Flyers App </Text>
       <Text style={styles.paragraph}> Please enter you phone number: </Text>
@@ -209,14 +218,13 @@ function setLoading(status){
         <Text style={styles.text}>Get Flyers</Text>
       </Pressable>
 
-      <View>
-        <Text style={styles.messageBodyText}><p>Your coordinates are: {lat} {long}</p> </Text>
+      <View>        
+        <Text style={styles.pageTitle}>Your coordinates are: {"\n"} {lat}  {long}</Text>
+        <Text style={styles.pageTitle}>Your location: {location}</Text>
       </View>
-      <View>
-        <Text style={styles.messageBodyText}><p>Your location: {location}</p> </Text>
-      </View>         
       
     </View>
+    </SafeAreaView>
 
   );
 

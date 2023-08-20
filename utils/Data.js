@@ -28,3 +28,20 @@ export const Flyer = [
 ]
 
 
+export const LoveNote = [
+{ id: "1", uri: require('./../assets/img0.png'), color:"#fc5c6577", title:"Dear Dhanshree,", bulletin:"You are the best thing that has happended to me in a long long time. 😇" },
+{ id: "2", uri: require('./../assets/img0.png'), color:"#fd964477", title:"Babe,", bulletin:"You are the most amazing girl who has touched my heart and completely possessed it. 😍" },
+{ id: "3", uri: require('./../assets/img0.png'), color:"#fed33077", title:"Sweetheart,", bulletin:"You dont know how you make me weak in my knees. 🥰" },
+{ id: "4", uri: require('./../assets/img0.png'), color:"#26de8177", title:"Baby,", bulletin:"You are so beautiful you, give me butterlfies in the stomach. 😍" },
+{ id: "5", uri: require('./../assets/img0.png'), color:"#a55eea77", title:"Dear Girl,", bulletin:"You dont know how you rock my world. 🌏" },
+{ id: "6", uri: require('./../assets/img0.png'), color:"#2bcbba77", title:"You make me smile,", bulletin:"Not only you are beautiful but you are also so intelligent. 😘" },
+{ id: "7", uri: require('./../assets/img0.png'), color:"#fa823177", title:"Dear Love,", bulletin:"You are the last thing on my mind before I go to sleep. 🌓" },
+{ id: "8", uri: require('./../assets/img0.png'), color:"#4b658477", title:"And,", bulletin:"You are the first thing in my mind when I wake up. 🌞" },
+{ id: "9", uri: require('./../assets/img0.png'), color:"#2d98da77", title:"Everyday I wish,", bulletin:"That I get to hold you in my arms. 🤗" },
+{ id: "10", uri: require('./../assets/img0.png'), color:"#eb3b5a77", title:"And,", bulletin:"Kiss you again and again till we get tired. 💋" },
+{ id: "11", uri: require('./../assets/img0.png'), color:"#3867d677", title:"I have to say,", bulletin:"I miss you so much.😇" },
+{ id: "12", uri: require('./../assets/img0.png'), color:"#a5b1c277", title:"And my dear,", bulletin:"I love you so much.❤️" }
+
+]
+
+
