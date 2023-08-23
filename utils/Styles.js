@@ -33,26 +33,22 @@ const styles = StyleSheet.create({
   input: {
     height: 40,
     margin: 12,
-    borderWidth: 0.5,
-    padding: 10,
+    type : 'flat',
+    // borderWidth: 0.5,
+    padding: 5,
   },
 
   button: {
-    height: 40,
-    margin: 12,
-    borderWidth: 0.5,
-    
-    padding: 20,
-    paddingVertical: 12,
+    // height: 40,
+    margin: 12,    
     paddingHorizontal: 32,
     borderRadius: 5,
     elevation: 4,
 
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#ff7979',
-    borderColor: '#ff7979',
-
+    // backgroundColor: '#ff7979',
+    uppercase: false,
 
   },
 
@@ -62,6 +58,8 @@ const styles = StyleSheet.create({
     fontWeight: '400',
     letterSpacing: 0.25,
     color: 'white',
+    fontFamily : 'Arial', //'Helvetica', 'Arial', 'sans-serif';
+    uppercase: false,
   },
 
   paragraph:{

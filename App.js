@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { Text, View, Pressable, TextInput } from 'react-native';
+
+import { Text, View, Pressable } from 'react-native';
 
 
 import {NavigationContainer, useNavigation} from '@react-navigation/native';
@@ -12,6 +13,8 @@ import { styles } from "./utils/Styles";
 import { useState } from 'react';
 import {alertType, FreeAlerts} from './utils/Alerts'; 
 
+import { PaperProvider, Button, TextInput } from 'react-native-paper';
+import  MyActivityComponent  from './utils/PaperComponents';
 
 // import H from "@here/maps-api-for-javascript";
 const HERE_API_KEY = "jTyIvP7FORzSbxrTjR11jNdScr8fDS8HXLOkObeqRvo"
@@ -128,6 +131,8 @@ function getLocationFromGeoCordinates(latitude, longitude){
             
             if (city != ''){
               onLocationUpdate(city);
+              setLoading(false);
+              
             }
 
 
@@ -139,6 +144,7 @@ function getLocationFromGeoCordinates(latitude, longitude){
 function setLoading(status){
     console.log('setLoading');
     console.log(status);
+    // MyActivityComponent.setAnimate(status);
 }
 
 //-----Maps API Geocoding
@@ -197,9 +203,13 @@ function setLoading(status){
     return true
   };
 
+  function onPressFunction(){
+    console.log("Get Location from dropdown");
+  }
 
 
   return (
+    <PaperProvider theme={{ version: 2 }}>
     <SafeAreaView style={styles.safeArea}>
     <View style={styles.container}>
       <Text style={styles.pageTitle}> Welcome to Free Flyers App </Text>
@@ -215,18 +225,28 @@ function setLoading(status){
         keyboardType='phone-pad'
       />
 
-      <Pressable style={styles.button} onPress={() => {loginCheck(number)}}>
+      <Button  mode="contained" style={styles.button} onPress={() => {loginCheck(number)}}>
         <Text style={styles.text}>Get Flyers</Text>
-      </Pressable>
+      </Button>
 
-      <View>        
-        <Text style={styles.pageTitle}>Your coordinates are: {"\n"} {lat}  {long}</Text>
+        <View> 
+          
+          <Text style={styles.pageTitle}>Your coordinates are: {"\n"} {lat}  {long}</Text>
+                    
+        <View>        
+              <MyActivityComponent />
+        </View>
+
+        <Pressable onPress={onPressFunction}>      
         <Text style={styles.pageTitle}>Your location: {location}</Text>
-      </View>
-      
+        </Pressable>
+        
+        </View>
+    
     </View>
-    </SafeAreaView>
 
+    </SafeAreaView>
+    </PaperProvider>
   );
 
 
