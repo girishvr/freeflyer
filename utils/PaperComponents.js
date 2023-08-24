@@ -11,13 +11,13 @@ const MyActivityComponent = () => {
     useEffect(() => {
         setTimeout(() => {
             setAnimate(false);
-        }, 4000);
+        }, 3000);
     })
 
   
     return (
         <ActivityIndicator animating={animate} 
-          color="#26de8177" size={40} /> //color={MD2Colors.red800}
+           size={30} /> //color={MD2Colors.red800}
     )
 }
 

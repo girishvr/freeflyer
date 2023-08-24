@@ -45,10 +45,10 @@ export const LoveNote = [
 ]
 
 export const CityData = [
+  { id: "4", city_label: "Delhi", city_tier: "1" },
   { id: "1", city_label: "Ahmedabad", city_tier: "1" },
   { id: "2", city_label: "Bengaluru", city_tier: "1" },
   { id: "3", city_label: "Chennai", city_tier: "1" },
-  { id: "4", city_label: "Delhi", city_tier: "1" },
   { id: "5", city_label: "Hyderabad", city_tier: "1" },
   { id: "6", city_label: "Kolkata", city_tier: "1" },
   { id: "7", city_label: "Mumbai", city_tier: "1" },

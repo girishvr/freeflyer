@@ -10,11 +10,14 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import {FlyerScreen, FlyerTypes} from './Screens/Flyers.js';
 import { styles } from "./utils/Styles";
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import {alertType, FreeAlerts} from './utils/Alerts'; 
 
-import { PaperProvider, Button, TextInput } from 'react-native-paper';
+import { PaperProvider, Button, TextInput, Snackbar } from 'react-native-paper';
 import  MyActivityComponent  from './utils/PaperComponents';
+
+import {Picker} from '@react-native-picker/picker';
+import {CityData} from './utils/Data';
 
 // import H from "@here/maps-api-for-javascript";
 const HERE_API_KEY = "jTyIvP7FORzSbxrTjR11jNdScr8fDS8HXLOkObeqRvo"
@@ -22,7 +25,6 @@ const HERE_APP_ID = "TiGEKf1vgpGbsGfZ3sIQ"
 
 
 const Stack = createNativeStackNavigator();
-
 
 export default function App(){
   return (
@@ -132,7 +134,7 @@ function getLocationFromGeoCordinates(latitude, longitude){
             if (city != ''){
               onLocationUpdate(city);
               setLoading(false);
-              
+              // setSelectedCity(location);
             }
 
 
@@ -176,6 +178,16 @@ function setLoading(status){
 
 
   const loginCheck = (number) => {
+
+    console.log(location);
+
+    if (location == '' || location == "false"){
+
+      onToggleSnackBar();
+
+      return;
+    }
+
     
     let num = number.replace(".", '');
 
@@ -203,9 +215,30 @@ function setLoading(status){
     return true
   };
 
-  function onPressFunction(){
-    console.log("Get Location from dropdown");
+
+  function locationPicked(itemValue, itemIndex){
+    console.log('itemValue - ' + itemValue);
+    console.log('itemIndex - ' + itemIndex);
+    onLocationUpdate(itemValue)
   }
+    
+
+  const pickerRef = useRef();
+
+  function openPicker() {
+    pickerRef.current.focus();
+  }
+
+  function closePicker() {
+    pickerRef.current.blur();
+  }
+
+
+  const [visible, setVisible] = React.useState(false);
+
+  const onToggleSnackBar = () => setVisible(!visible);
+
+  const onDismissSnackBar = () => setVisible(false);
 
 
   return (
@@ -231,17 +264,52 @@ function setLoading(status){
 
         <View> 
           
-          <Text style={styles.pageTitle}>Your coordinates are: {"\n"} {lat}  {long}</Text>
+          <Text style={styles.paragraph}>Your coordinates are: {"\n"} {lat}  {long}</Text>
                     
-        <View>        
-              <MyActivityComponent />
-        </View>
+          <View>        
+                <MyActivityComponent />
+          </View>
 
-        <Pressable onPress={onPressFunction}>      
-        <Text style={styles.pageTitle}>Your location: {location}</Text>
-        </Pressable>
+          <Text style={styles.paragraph}>Your location:</Text>  
+          
         
-        </View>
+         </View>
+
+
+            <Picker
+                  ref={pickerRef}
+                  mode = 'dialog' //'dropdown'
+                  // themeVariant = 'light'
+                  style={styles.picker}
+                  selectedValue={location}
+                  onValueChange={(itemValue, itemIndex) =>                  
+                      locationPicked(itemValue, itemIndex)
+                  }>
+
+                  <Picker.Item label="Select Your Location" value={false} key="0" />
+                  {CityData.map((item) => {
+                    return (<Picker.Item label={item.city_label} value={item.city_label} key={item.id}/>) 
+                    })}
+
+              </Picker>
+
+              <View style={styles.containerSnackbar}>
+              <Snackbar
+                visible={visible}                
+                style={styles.snackbar}
+                duration = {2000}
+                elevation = '0'
+                onDismiss={onDismissSnackBar}
+                action={{
+                  label: <Text style={styles.snackbarButton}>Close</Text>  ,
+                  onPress: () => { /*Do something*/ },
+                }}
+                >
+                Please Select Location First.
+              </Snackbar>
+              </View>
+        
+
     
     </View>
 

@@ -23,6 +23,27 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 
+  containerSnackbar: {
+    flex: 1,
+    justifyContent: 'space-between',
+    //     alignItems: 'center',
+    // justifyContent: 'center',
+    width:300,
+    height:50,
+
+  },
+
+  snackbar: {
+    backgroundColor:'rgb(187, 134, 252)',        
+    elevation : 2,
+  },
+
+  snackbarButton: {
+    color: 'black',
+    fontSize:10,
+
+  },
+
   pageTitle:{
     fontWeight:'400',
     textAlign:'center',
@@ -53,9 +74,9 @@ const styles = StyleSheet.create({
   },
 
   text: {
-    fontSize: 16,
+    fontSize: 14,
     lineHeight: 21,
-    fontWeight: '400',
+    fontWeight: '600',
     letterSpacing: 0.25,
     color: 'white',
     fontFamily : 'Arial', //'Helvetica', 'Arial', 'sans-serif';
@@ -66,7 +87,7 @@ const styles = StyleSheet.create({
     fontWeight:'400',
     textAlign:'center',
     fontSize:18,
-    padding:14,
+    padding:10,
   },
 
   //* Swiper
@@ -125,6 +146,15 @@ const styles = StyleSheet.create({
     fontFamily: 'monospace', //'Academy Engraved LET',
   },
 
+  picker:{
+    height: 36, 
+    width: 180, 
+    padding : 5,
+    // textAlign:'center',
+    backgroundColor: 'ivory', //'#ff7979', //
+    borderWidth : 1,
+    borderRadius: 5,
+  },
   
 });
 
