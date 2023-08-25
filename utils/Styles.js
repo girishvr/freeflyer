@@ -23,6 +23,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 
+  containerOptions: {
+    flex: 1,
+    backgroundColor: 'ivory',
+    alignItems: 'center',
+    // justifyContent: 'center',
+  },
+
+
   containerSnackbar: {
     flex: 1,
     justifyContent: 'space-between',
@@ -75,7 +83,7 @@ const styles = StyleSheet.create({
 
   callButton: {
     // height: 40,
-    width: 80,
+    // width: 80,
     margin: 12,    
     paddingHorizontal: 32,
     
@@ -85,6 +93,18 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     // backgroundColor: '#ff7979',
     uppercase: false,
+
+  },
+
+  optionButton: {
+    height: 60,
+    width: 200,
+    elevation: 24,
+    borderRadius: 10,
+
+    alignItems: 'center',
+    justifyContent: 'center',
+    uppercase: true,
 
   },
 

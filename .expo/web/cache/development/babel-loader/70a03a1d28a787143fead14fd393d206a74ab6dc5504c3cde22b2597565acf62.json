@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { StatusBar } from 'expo-status-bar';","map":{"version":3,"names":["StatusBar"],"sources":["/Users/girish/Projects/Private/freeflyer/Screens/OptionsScreen.js"],"sourcesContent":["//OptionsScreen\n\nimport { StatusBar } from 'expo-status-bar';\n"],"mappings":"AAEA,SAASA,SAAS,QAAQ,iBAAiB"},"metadata":{},"sourceType":"module","externalDependencies":[]}

@@ -64,20 +64,21 @@ export const FlyerScreen = (props) =>{
 
           <SwiperSlide key={item.id} style={styles.cardView} >
            
-            <View style={{backgroundColor:"skyblue" ,justifyContent: 'space-between', display: "flex", height: "100%", borderRadius: 10}}> 
+            <View style={{backgroundColor:"skyblue", justifyContent: 'space-between', display: "flex", height: "100%", borderRadius: 10}}> 
 
               <View >
                 <Text style={styles.messageTitleText}>{item.title}</Text>
               </View>
+
               <View style={{ alignItems: 'center', height:'60%'}}>
                 <Text style={styles.messageBodyText}>{item.bulletin}</Text>
               </View>
                           
               <View style={{ alignItems: 'center', height:'20%'}}>
-              <Button style={styles.callButton} icon="phone" mode="outlined" onPress={()=>{Linking.openURL('tel:'+ item.phone);}}>
-                Call
-              </Button>
-                </View>
+                <Button style={styles.callButton} icon="phone" mode="outlined" onPress={()=>{Linking.openURL('tel:'+ item.phone);}}>
+                  Call
+                </Button>
+              </View>
                     
 
             </View>
@@ -89,7 +90,7 @@ export const FlyerScreen = (props) =>{
       
 
       </Swiper>
-      <StatusBar style="false" />
+      <StatusBar style="light" />
     </View>
   );
 }

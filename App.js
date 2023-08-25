@@ -9,6 +9,10 @@ import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import {FlyerScreen, FlyerTypes} from './Screens/Flyers.js';
+
+import {OptionsScreen} from './Screens/OptionsScreen.js';
+import {AddFlyerScreen} from './Screens/AddFlyer.js';
+
 import { styles } from "./utils/Styles";
 import { useState, useRef } from 'react';
 import {alertType, FreeAlerts} from './utils/Alerts'; 
@@ -31,17 +35,30 @@ export default function App(){
     <SafeAreaProvider>
       <NavigationContainer>
         <Stack.Navigator>
-         <Stack.Screen 
-          name="Flyers" 
-          component={FlyerScreen} 
-          options={{headerShown: false}}
-          />
           <Stack.Screen
             name="Free Flyers App"
             component={HomeScreen}
-            options={{headerShown: true}}
+            options={{headerShown: true, headerTitleAlign: "center",}}
           />
-         
+
+          <Stack.Screen
+            name="Pick Option"
+            component={OptionsScreen}
+            options={{headerShown: true, headerTitleAlign: "center",}}
+          />
+
+          <Stack.Screen 
+          name="Flyers" 
+          component={FlyerScreen} 
+          options={{headerShown: true, headerTitleAlign: 'center'}}
+          />
+
+          <Stack.Screen
+            name="Add Flyers"
+            component={AddFlyerScreen}
+            options={{headerShown: true, headerTitleAlign: "center",}}
+          />
+
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>  
@@ -174,7 +191,8 @@ function setLoading(status){
 
     // TODO: Testing
     // navigation.navigate('Flyers', {isPrivate: FlyerTypes.Private});
-    // return;
+    navigation.navigate('Pick Option', {navigation});
+    return;
       
     console.log(location);
 
