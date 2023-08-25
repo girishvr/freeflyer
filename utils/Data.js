@@ -1,46 +1,46 @@
 
 
 export const Flyer = [
-  { id: "1", uri: require('./../assets/img0.png'), color:"#fc5c6577", title:"Hi", bulletin:"How are you doing?" },
-  { id: "2", uri: require('./../assets/img1.jpeg'), color:"#fd964477", title:"Hello", bulletin:"How is it going on?" },
-  { id: "3", uri: require('./../assets/img2.png'), color:"#fed33077", title:"Hey", bulletin:"You look awesome!" },
-  { id: "4", uri: require('./../assets/img3.jpeg'), color:"#26de8177", title:"Hola", bulletin:"What is up?" },
-  { id: "5", uri: require('./../assets/img4.jpeg'), color:"#2bcbba77", title:"Yello", bulletin:"What good in the woods?" },
+  { id: "1", phone: "9876543210", color:"#fc5c6577", title:"Hi", bulletin:"How are you doing?" },
+  { id: "2", phone: "9876543219", color:"#fd964477", title:"Hello", bulletin:"How is it going on?" },
+  { id: "3", phone: "9876543218", color:"#fed33077", title:"Hey", bulletin:"You look awesome!" },
+  { id: "4", phone: "9876543215", color:"#26de8177", title:"Hola", bulletin:"What is up?" },
+  { id: "5", phone: "9876543214", color:"#2bcbba77", title:"Yello", bulletin:"What good in the woods?" },
 
-  { id: "11", uri: require('./../assets/img0.png'), color:"#2d98da77", title:"Yello", bulletin:"What good in the woods?" },
-  { id: "22", uri: require('./../assets/img1.jpeg'), color:"#3867d677", title:"Hola", bulletin:"What is up?" },
-  { id: "33", uri: require('./../assets/img2.png'), color:"#8854d077", title:"Hey", bulletin:"You look awesome!" },
-  { id: "44", uri: require('./../assets/img3.jpeg'), color:"#a5b1c277", title:"Hello", bulletin:"How is it going on?" },
-  { id: "77", uri: require('./../assets/img4.jpeg'), color:"#4b658477", title:"Hi", bulletin:"How are you doing?" },
+  { id: "11", phone: "9876543213", color:"#2d98da77", title:"Yello", bulletin:"What good in the woods?" },
+  { id: "22", phone: "9876543212", color:"#3867d677", title:"Hola", bulletin:"What is up?" },
+  { id: "33", phone: "9876543211", color:"#8854d077", title:"Hey", bulletin:"You look awesome!" },
+  { id: "44", phone: "9876543218", color:"#a5b1c277", title:"Hello", bulletin:"How is it going on?" },
+  { id: "77", phone: "9876543219", color:"#4b658477", title:"Hi", bulletin:"How are you doing?" },
 
-  { id: "111", uri: require('./../assets/img0.png'), color:"#eb3b5a77", title:"Yello", bulletin:"What good in the woods?" },
-  { id: "222", uri: require('./../assets/img1.jpeg'), color:"#fa823177", title:"Hola", bulletin:"What is up?" },
-  { id: "333", uri: require('./../assets/img2.png'), color:"#f7b73177", title:"Hey", bulletin:"You look awesome!" },
-  { id: "444", uri: require('./../assets/img3.jpeg'), color:"#20bf6b77", title:"Hello", bulletin:"How is it going on?" },
-  { id: "577", uri: require('./../assets/img4.jpeg'), color:"#0fb9b177", title:"Hi", bulletin:"How are you doing?" },
+  { id: "111", phone: "9876543213", color:"#eb3b5a77", title:"Yello", bulletin:"What good in the woods?" },
+  { id: "222", phone: "9876543214", color:"#fa823177", title:"Hola", bulletin:"What is up?" },
+  { id: "333", phone: "9876543215", color:"#f7b73177", title:"Hey", bulletin:"You look awesome!" },
+  { id: "444", phone: "9876543216", color:"#20bf6b77", title:"Hello", bulletin:"How is it going on?" },
+  { id: "577", phone: "9876543217", color:"#0fb9b177", title:"Hi", bulletin:"How are you doing?" },
 
-  { id: "1111", uri: require('./../assets/img0.png'), color:"#45aaf277", title:"Yello", bulletin:"What good in the woods?" },
-  { id: "2222", uri: require('./../assets/img1.jpeg'), color:"#4b7bec77", title:"Hola", bulletin:"What is up?" },
-  { id: "3333", uri: require('./../assets/img2.png'), color:"#a55eea77", title:"Hey", bulletin:"You look awesome!" },
-  { id: "4444", uri: require('./../assets/img3.jpeg'), color:"#d1d8e077", title:"Hello", bulletin:"How is it going on?" },
-  { id: "5577", uri: require('./../assets/img4.jpeg'), color:"#778ca377", title:"Hi", bulletin:"How are you doing?" },
+  { id: "1111", phone: "9876543218", color:"#45aaf277", title:"Yello", bulletin:"What good in the woods?" },
+  { id: "2222", phone: "9876543216", color:"#4b7bec77", title:"Hola", bulletin:"What is up?" },
+  { id: "3333", phone: "9876543214", color:"#a55eea77", title:"Hey", bulletin:"You look awesome!" },
+  { id: "4444", phone: "9876543212", color:"#d1d8e077", title:"Hello", bulletin:"How is it going on?" },
+  { id: "5577", phone: "9876543210", color:"#778ca377", title:"Hi", bulletin:"How are you doing?" },
 
 ]
 
 
 export const LoveNote = [
-{ id: "1", uri: require('./../assets/img0.png'), color:"#fc5c6577", title:"Dear Dhanshree,", bulletin:"You are the best thing that has happended to me in a long long time. 😇" },
-{ id: "2", uri: require('./../assets/img0.png'), color:"#fd964477", title:"Babe,", bulletin:"You are the most amazing girl who has touched my heart and completely possessed it. 😍" },
-{ id: "3", uri: require('./../assets/img0.png'), color:"#fed33077", title:"Sweetheart,", bulletin:"You dont know how you make me weak in my knees. 🥰" },
-{ id: "4", uri: require('./../assets/img0.png'), color:"#26de8177", title:"Baby,", bulletin:"You are so beautiful you, give me butterlfies in the stomach. 😍" },
-{ id: "5", uri: require('./../assets/img0.png'), color:"#a55eea77", title:"Dear Girl,", bulletin:"You dont know how you rock my world. 🌏" },
-{ id: "6", uri: require('./../assets/img0.png'), color:"#2bcbba77", title:"You make me smile,", bulletin:"Not only you are beautiful but you are also so intelligent. 😘" },
-{ id: "7", uri: require('./../assets/img0.png'), color:"#fa823177", title:"Dear Love,", bulletin:"You are the last thing on my mind before I go to sleep. 🌓" },
-{ id: "8", uri: require('./../assets/img0.png'), color:"#4b658477", title:"And,", bulletin:"You are the first thing in my mind when I wake up. 🌞" },
-{ id: "9", uri: require('./../assets/img0.png'), color:"#2d98da77", title:"Everyday I wish,", bulletin:"That I get to hold you in my arms. 🤗" },
-{ id: "10", uri: require('./../assets/img0.png'), color:"#eb3b5a77", title:"And,", bulletin:"Kiss you again and again till we get tired. 💋" },
-{ id: "11", uri: require('./../assets/img0.png'), color:"#3867d677", title:"I have to say,", bulletin:"I miss you so much.😇" },
-{ id: "12", uri: require('./../assets/img0.png'), color:"#a5b1c277", title:"And my dear,", bulletin:"I love you so much.❤️" }
+{ id: "1", phone: "9876543210", color:"#fc5c6577", title:"Dear Dhanshree,", bulletin:"You are the best thing that has happended to me in a long long time. 😇" },
+{ id: "2", phone: "9876543210", color:"#fd964477", title:"Babe,", bulletin:"You are the most amazing girl who has touched my heart and completely possessed it. 😍" },
+{ id: "3", phone: "9876543210", color:"#fed33077", title:"Sweetheart,", bulletin:"You dont know how you make me weak in my knees. 🥰" },
+{ id: "4", phone: "9876543210", color:"#26de8177", title:"Baby,", bulletin:"You are so beautiful you, give me butterlfies in the stomach. 😍" },
+{ id: "5", phone: "9876543210", color:"#a55eea77", title:"Dear Girl,", bulletin:"You dont know how you rock my world. 🌏" },
+{ id: "6", phone: "9876543210", color:"#2bcbba77", title:"You make me smile,", bulletin:"Not only you are beautiful but you are also so intelligent. 😘" },
+{ id: "7", phone: "9876543210", color:"#fa823177", title:"Dear Love,", bulletin:"You are the last thing on my mind before I go to sleep. 🌓" },
+{ id: "8", phone: "9876543210", color:"#4b658477", title:"And,", bulletin:"You are the first thing in my mind when I wake up. 🌞" },
+{ id: "9", phone: "9876543210", color:"#2d98da77", title:"Everyday I wish,", bulletin:"That I get to hold you in my arms. 🤗" },
+{ id: "10", phone: "9876543210", color:"#eb3b5a77", title:"And,", bulletin:"Kiss you again and again till we get tired. 💋" },
+{ id: "11", phone: "9876543210", color:"#3867d677", title:"I have to say,", bulletin:"I miss you so much.😇" },
+{ id: "12", phone: "9876543210", color:"#a5b1c277", title:"And my dear,", bulletin:"I love you so much.❤️" }
 
 ]
 
@@ -135,7 +135,7 @@ export const CityData = [
   { id: "88", city_label: "Salem", city_tier: "2" },
   { id: "89", city_label: "Sangli", city_tier: "2" },
   { id: "90", city_label: "Shimla", city_tier: "2" },
-  { id: "91", city_label: "Siliguri", city_tier: "2" },
+  { id: "91", city_label: "Siligphone", city_tier: "2" },
   { id: "92", city_label: "Solapur", city_tier: "2" },
   { id: "93", city_label: "Srinagar", city_tier: "2" },
   { id: "94", city_label: "Surat", city_tier: "2" },

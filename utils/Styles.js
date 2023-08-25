@@ -73,6 +73,21 @@ const styles = StyleSheet.create({
 
   },
 
+  callButton: {
+    // height: 40,
+    width: 80,
+    margin: 12,    
+    paddingHorizontal: 32,
+    
+    elevation: 24,
+
+    alignItems: 'center',
+    justifyContent: 'center',
+    // backgroundColor: '#ff7979',
+    uppercase: false,
+
+  },
+
   text: {
     fontSize: 14,
     lineHeight: 21,
@@ -102,28 +117,28 @@ const styles = StyleSheet.create({
 
   //* SwiperSlide
   cardView:{
-    backgroundColor: '#c7ecee',
-    height: SCREEN_HEIGHT - 60,
+    // backgroundColor: '#c7ecee',
+    height: ((SCREEN_WIDTH - 80) * 1.8) ,//SCREEN_HEIGHT - 60,
     width: SCREEN_WIDTH - 80, // *Redundant - since we are using slidePerView = 1 *//
-    // padding: 50,
-    // position:'absolute',
     resizeMode: "cover",
-    borderRadius: 15,
-    // alignItems: 'center',
-    // justifyContent: 'center',  
+    borderRadius: 10,
+    justifyContent: 'space-between', //'center',  
     // minimumVelocity: 0.1
 
   },
 
   //* flex view on which all the eliments are placed and background color is applied
   innerView:{
-    // backgroundColor: '#f0f',
-    // alignItems: 'center',
-    // justifyContent: 'center', 
     display: "flex",
     height: "100%",
-    borderRadius: 15,
+    borderRadius: 10,
 
+  },
+
+  footer: {
+    alignItems: 'bottom',
+    // backgroundColor : "green",
+    // justifyContent:'flex-end',
   },
 
   messageTitleText:{

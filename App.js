@@ -31,16 +31,17 @@ export default function App(){
     <SafeAreaProvider>
       <NavigationContainer>
         <Stack.Navigator>
+         <Stack.Screen 
+          name="Flyers" 
+          component={FlyerScreen} 
+          options={{headerShown: false}}
+          />
           <Stack.Screen
             name="Free Flyers App"
             component={HomeScreen}
             options={{headerShown: true}}
           />
-          <Stack.Screen 
-          name="Flyers" 
-          component={FlyerScreen} 
-          options={{headerShown: false}}
-          />
+         
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>  
@@ -152,14 +153,6 @@ function setLoading(status){
 //-----Maps API Geocoding
 
 
-
-
-
-  // To fix the recursive call to on press without pressing the button
-  // onPress={() => this.props.navigation.navigate('Home')}
-  // {() => navigate('loginCheck', { number: number })}
-  // {() => { loginCheck(number)}}
-
   const loginUser = (number) => {
     //use navigation hook shown as below
     // const navigation = useNavigation();
@@ -179,12 +172,15 @@ function setLoading(status){
 
   const loginCheck = (number) => {
 
+    // TODO: Testing
+    // navigation.navigate('Flyers', {isPrivate: FlyerTypes.Private});
+    // return;
+      
     console.log(location);
 
+    //Location check
     if (location == '' || location == "false"){
-
       onToggleSnackBar();
-
       return;
     }
 
