@@ -3,8 +3,7 @@
 import Swal from 'sweetalert2'
 import './App.css'; 
 
-
-
+import React, { useState } from 'react';
 
 
 
@@ -34,6 +33,7 @@ import './App.css';
   export const alertType = Object.freeze({
     InvalidInput: 'invalid',
     Success: 'success',
+    NewFlyer: 'new_flyer',
   });
 
 
@@ -46,7 +46,11 @@ import './App.css';
       case 'success':
         successAlert();
         break;
+      case 'new_flyer':
+        newFlyerAlert()
+        break;
       default:
+        
         console.log("Sweet Alert - invalid option");
         break;
     }
@@ -84,6 +88,48 @@ import './App.css';
         popup: 'sweet_container',
       }
     });
+  }
+
+
+ const newFlyerAlert = () => {
+
+  let enterFlyerSwal = {
+    title: 'Enter Flyer Infromation',
+    focusConfirm: false,
+    html: `
+      <input class="swal2-input" id="flyer_title" type="text" placeholder="Enter Title Text" autofocus /><br />
+      <textarea class="swal2-input swal2-textarea" id="flyer_bulletin" type="text" placeholder="Enter Message"></textarea> 
+    `,
+    
+    showCancelButton: true,
+    cancelButtonColor: 'grey',
+    confirmButtonText: 'Post it!',
+    allowOutsideClick: false,
+    customClass:{
+        title: 'sweet_title_flyer_alert',
+        // header: 'sweet_title',
+        // popup: 'sweet_container',
+      },
+    preConfirm: () => ({
+      flyer_title: document.getElementById('flyer_title').value,
+      flyer_bulletin: document.getElementById('flyer_bulletin').value,
+    })
+  };
+
+  const swalval = Swal.fire(enterFlyerSwal).then((result) => {
+            /* Read more about isConfirmed, isDenied below */
+            if (result.isConfirmed) {
+                console.log(result.value);
+                console.log(result.value.flyer_title); 
+                console.log(result.value.flyer_bulletin); 
+                Swal.fire(JSON.stringify(result.value));
+                // Swal.fire('Your flyer is posted!', '', 'success');
+ 
+            } else
+                Swal.fire('Operation Cancelled', '', 'error');
+ 
+        })
+   
   }
 
 

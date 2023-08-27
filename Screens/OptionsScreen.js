@@ -5,6 +5,7 @@ import { Text, View } from 'react-native';
 import { styles } from "./../utils/Styles";
 
 import { PaperProvider, Button} from 'react-native-paper';
+import {alertType, FreeAlerts} from './../utils/Alerts'; 
 
 
 
@@ -27,7 +28,7 @@ export const OptionsScreen = ({navigation}) =>{
               </View>
                           
               <View style={{ alignItems: 'center', height:'20%'}}>
-                <Button style={styles.optionButton} mode="outlined" onPress={()=>{navigation.navigate('Add Flyers', {navigation});}}>
+                <Button style={styles.optionButton} mode="outlined" onPress={()=>{  FreeAlerts(alertType.NewFlyer);}}>
                   Add Flyers
                 </Button>
               </View>

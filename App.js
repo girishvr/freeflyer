@@ -35,18 +35,20 @@ export default function App(){
     <SafeAreaProvider>
       <NavigationContainer>
         <Stack.Navigator>
+
+         <Stack.Screen
+            name="Pick Option"
+            component={OptionsScreen}
+            options={{headerShown: true, headerTitleAlign: "center",}}
+          />
+
           <Stack.Screen
             name="Free Flyers App"
             component={HomeScreen}
             options={{headerShown: true, headerTitleAlign: "center",}}
           />
 
-          <Stack.Screen
-            name="Pick Option"
-            component={OptionsScreen}
-            options={{headerShown: true, headerTitleAlign: "center",}}
-          />
-
+         
           <Stack.Screen 
           name="Flyers" 
           component={FlyerScreen} 
@@ -269,6 +271,7 @@ function setLoading(status){
         maxLength={10}
         placeholder="Phone Number"
         inputMode="numeric"
+        mode="outlined"
         keyboardType='phone-pad'
       />
 
