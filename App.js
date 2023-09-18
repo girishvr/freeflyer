@@ -36,12 +36,12 @@ export default function App(){
       <NavigationContainer>
         <Stack.Navigator>
 
-         <Stack.Screen
+         {/*<Stack.Screen
             name="Pick Option"
             component={OptionsScreen}
             options={{headerShown: true, headerTitleAlign: "center",}}
           />
-
+*/}
           <Stack.Screen
             name="Free Flyers App"
             component={HomeScreen}
@@ -55,11 +55,11 @@ export default function App(){
           options={{headerShown: true, headerTitleAlign: 'center'}}
           />
 
-          <Stack.Screen
+          {/*<Stack.Screen
             name="Add Flyers"
             component={AddFlyerScreen}
             options={{headerShown: true, headerTitleAlign: "center",}}
-          />
+          />*/}
 
         </Stack.Navigator>
       </NavigationContainer>
@@ -192,8 +192,8 @@ function setLoading(status){
   const loginCheck = (number) => {
 
     // TODO: Testing
-    // navigation.navigate('Flyers', {isPrivate: FlyerTypes.Private});
-    navigation.navigate('Pick Option', {navigation});
+    navigation.navigate('Flyers', {isPrivate: FlyerTypes.Private});
+    // navigation.navigate('Pick Option', {navigation});
     return;
       
     console.log(location);

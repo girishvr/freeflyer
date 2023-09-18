@@ -1,3 +1,10 @@
+
+Production Build:
+Locally: expo build:web
+Then commit and push
+Pull on server
+ sudo service apache2 restart
+
 REF
 https://codesandbox.io/s/react-swipe-cards-xzhuq?file=/package.json
 
