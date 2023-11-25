@@ -4,7 +4,6 @@ export const Flyer = [
   { id:"001", phone: "9876543218", bulletin:"To live is the rarest thing in the world. Most people exist, that is all.", title:"Oscar Wilde" },
   { id:"002", phone: "9876543218", bulletin:"That it will never come again is what makes life so sweet.", title:"Emily Dickinson" },
   { id:"003", phone: "9876543218", bulletin:"It is never too late to be what you might have been.", title:"George Eliot" },
-  { id:"004", phone: "9876543218", bulletin:"To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.", title:"Ralph Waldo Emerson" },
   { id:"005", phone: "9876543218", bulletin:"Pain is inevitable. Suffering is optional.", title:"Haruki Murakami" },
   { id:"006", phone: "9876543218", bulletin:"All the world's a stage, and all the men and women merely players.", title:"William Shakespeare" },
   { id:"007", phone: "9876543218", bulletin:"Be kind, for everyone you meet is fighting a hard battle.", title:"Plato" },
@@ -16,35 +15,18 @@ export const Flyer = [
   { id:"013", phone: "9876543218", bulletin:"Life is tough my darling, but so are you.", title:"Stephanie Bennett Henry" },
   { id:"014", phone: "9876543218", bulletin:"Self-awareness and self-love matter. Who we are is how we lead.", title:"Brene Brown" },
   { id:"015", phone: "9876543218", bulletin:"Amateurs sit and wait for inspiration, the rest of us just get up and go to work.", title:"Stephen King" },
-  { id:"016", phone: "9876543218", bulletin:"Get it down. Take chances. It may be bad, but it's the only way you can do anything really good.", title:"William Faulkner" },
   { id:"017", phone: "9876543218", bulletin:"As a writer, you should not judge, you should understand.", title:"Ernest Hemingway" },
   { id:"018", phone: "9876543218", bulletin:"To produce a mighty book, you must choose a mighty theme.", title:"Herman Melville" },
-  { id:"019", phone: "9876543218", bulletin:"Ideas are like rabbits. You get a couple and learn how to handle them, and pretty soon you have a dozen.", title:"John Steinbeck" },
-  { id:"020", phone: "9876543218", bulletin:"Sometimes, you read a book and it fills you with this weird evangelical zeal, and you become convinced that the shattered world will never be put back together unless and until all living humans read the book.", title:"John Green" },
   { id:"021", phone: "9876543218", bulletin:"The Six Golden Rules of Writing: Read, read, read, and write, write, write.", title:"Ernest Gaines" },
-  { id:"022", phone: "9876543218", bulletin:"As for ‘Write what you know,' I was regularly told this as a beginner. I think it's a very good rule and have always obeyed it. I write about imaginary countries, alien societies on other planets, dragons, wizards, the Napa Valley in 22002. I know these things. I know them better than anybody else possibly could, so it's my duty to testify about them.", title:"Ursula K. Le Guin" },
-  { id:"023", phone: "9876543218", bulletin:"You should write because you love the shape of stories and sentences and the creation of different words on a page. Writing comes from reading, and reading is the finest teacher of how to write.", title:"Annie Proulx" },
-  { id:"024", phone: "9876543218", bulletin:"Find out the reason that commands you to write; see whether it has spread its roots into the very depth of your heart; confess to yourself you would have to die if you were forbidden to write.", title:"Rainer Maria Rilke" },
   { id:"025", phone: "9876543218", bulletin:"The purpose of a writer is to keep civilization from destroying itself.", title:"Albert Camus" },
-  { id:"026", phone: "9876543218", bulletin:"A writer never has a vacation. For a writer life consists of either writing or thinking about writing.", title:"Eugene Ionesco" },
-  { id:"027", phone: "9876543218", bulletin:"Read, read, read. Read everything – trash, classics, good and bad, and see how they do it. Just like a carpenter who works as an apprentice and studies the master. Read! You'll absorb it. Then write. If it's good, you'll find out. If it's not, throw it out of the window.", title:"William Faulkner" },
   { id:"028", phone: "9876543218", bulletin:"A good writer possesses not only his own spirit but also the spirit of his friends.", title:"Friedrich Nietzsche" },
-  { id:"029", phone: "9876543218", bulletin:"Your writing voice is the deepest possible reflection of who you are. The job of your voice is not to seduce or flatter or make well-shaped sentences. In your voice, your readers should be able to hear the contents of your mind, your heart, your soul.", title:"Meg Rosoff" },
   { id:"030", phone: "9876543218", bulletin:"I am not at all in a humour for writing; I must write on until I am.", title:"Jane Austen" },
-  { id:"031", phone: "9876543218", bulletin:"You don't start out writing good stuff. You start out writing crap and thinking it's good stuff, and then gradually you get better at it. That's why I say one of the most valuable traits is persistence.", title:"Octavia E. Butler" },
   { id:"032", phone: "9876543218", bulletin:"You can always edit a bad page. You can't edit a blank page.", title:"Jodi Picoult" },
-  { id:"033", phone: "9876543218", bulletin:"Do not hoard what seems good for a later place in the book, or for another book; give it, give it all, give it now.", title:"Annie Dillard" },
   { id:"034", phone: "9876543218", bulletin:"If there's a book that you want to read, but it hasn't been written yet, then you must write it.", title:"Toni Morrison" },
   { id:"035", phone: "9876543218", bulletin:"Tears are words that need to be written.", title:"Paulo Coelho" },
   { id:"036", phone: "9876543218", bulletin:"You cannot find peace by avoiding life", title:"Virginia Woolf" },
   { id:"036", phone: "9876543218", bulletin:"The strongest principle of growth lies in the human choice", title:"George Eliot" },
   { id:"038", phone: "9876543218", bulletin:"Focus more on your desire than on your doubt, and the dream will take care of itself.", title:"Mark Twain" },
-  { id:"039", phone: "9876543218", bulletin:"We have to continually be jumping off cliffs and developing our wings on the way down.", title:"Kurt Vonnegut" },
-  { id:"040", phone: "9876543218", bulletin:"I hope that in this year to come, you make mistakes. Because if you are making mistakes, then you are making new things, trying new things, learning, living, pushing yourself, changing yourself, changing your world. You're doing things you've never done before, and more importantly, you're doing something.", title:"Neil Gaiman" },
-  { id:"041", phone: "9876543218", bulletin:"Don't bend; don't water it down; don't try to make it logical; don't edit your own soul according to the fashion. Rather, follow your most intense obsessions mercilessly.", title:"Franz Kafka" },
-  { id:"042", phone: "9876543218", bulletin:"Keep away from people who try to belittle your ambitions. Small people always do that, but the really great make you feel that you, too, can become great.", title:"Mark Twain" },
-  { id:"043", phone: "9876543218", bulletin:"Maybe it's not about having a beautiful day, but about finding beautiful moments. Maybe a whole day is just too much to ask. I could choose to believe that in every day, in all things, no matter how dark and ugly, there are shards of beauty if I look for them.", title:"Anna White" },
-  { id:"044", phone: "9876543218", bulletin:"Trust our heart if the seas catch fire, live by love though the stars walk backwards.", title:"E. E. Cummings" },
   { id:"045", phone: "9876543218", bulletin:"One day I will find the right words, and they will be simple.", title:"Jack Kerouac" },
   { id:"046", phone: "9876543218", bulletin:"I can be changed by what happens to me. But I refuse to be reduced by it.", title:"Maya Angelou" },
   { id:"047", phone: "9876543218", bulletin:"The most common way people give up their power is by thinking they don't have any.", title:"Alice Walker" },
@@ -55,21 +37,6 @@ export const Flyer = [
 ]
 
 
-export const LoveNote = [
-{ id: "1", phone: "9876543210", color:"#fc5c6577", title:"Dear Dhanshree,", bulletin:"You are the best thing that has happended to me in a long long time. 😇" },
-{ id: "2", phone: "9876543210", color:"#fd964477", title:"Babe,", bulletin:"You are the most amazing girl who has touched my heart and completely possessed it. 😍" },
-{ id: "3", phone: "9876543210", color:"#fed33077", title:"Sweetheart,", bulletin:"You dont know how you make me weak in my knees. 🥰" },
-{ id: "4", phone: "9876543210", color:"#26de8177", title:"Baby,", bulletin:"You are so beautiful you, give me butterlfies in the stomach. 😍" },
-{ id: "5", phone: "9876543210", color:"#a55eea77", title:"Dear Girl,", bulletin:"You dont know how you rock my world. 🌏" },
-{ id: "6", phone: "9876543210", color:"#2bcbba77", title:"You make me smile,", bulletin:"Not only you are beautiful but you are also so intelligent. 😘" },
-{ id: "7", phone: "9876543210", color:"#fa823177", title:"Dear Love,", bulletin:"You are the last thing on my mind before I go to sleep. 🌓" },
-{ id: "8", phone: "9876543210", color:"#4b658477", title:"And,", bulletin:"You are the first thing in my mind when I wake up. 🌞" },
-{ id: "9", phone: "9876543210", color:"#2d98da77", title:"Everyday I wish,", bulletin:"That I get to hold you in my arms. 🤗" },
-{ id: "10", phone: "9876543210", color:"#eb3b5a77", title:"And,", bulletin:"Kiss you again and again till we get tired. 💋" },
-{ id: "11", phone: "9876543210", color:"#3867d677", title:"I have to say,", bulletin:"I miss you so much.😇" },
-{ id: "12", phone: "9876543210", color:"#a5b1c277", title:"And my dear,", bulletin:"I love you so much.❤️" }
-
-]
 
 export const CityData = [
   { id: "4", city_label: "Delhi", city_tier: "1" },
@@ -183,5 +150,20 @@ export const CityData = [
   { id: "109", city_label: "Warangal", city_tier: "2" }
   ]
 
+export const LoveNote = [
+{ id: "1", phone: "9876543210", color:"#fc5c6577", title:"Dear Dhanshree,", bulletin:"You are the best thing that has happended to me in a long long time. 😇" },
+{ id: "2", phone: "9876543210", color:"#fd964477", title:"Babe,", bulletin:"You are the most amazing girl who has touched my heart and completely possessed it. 😍" },
+{ id: "3", phone: "9876543210", color:"#fed33077", title:"Sweetheart,", bulletin:"You dont know how you make me weak in my knees. 🥰" },
+{ id: "4", phone: "9876543210", color:"#26de8177", title:"Baby,", bulletin:"You are so beautiful you, give me butterlfies in the stomach. 😍" },
+{ id: "5", phone: "9876543210", color:"#a55eea77", title:"Dear Girl,", bulletin:"You dont know how you rock my world. 🌏" },
+{ id: "6", phone: "9876543210", color:"#2bcbba77", title:"You make me smile,", bulletin:"Not only you are beautiful but you are also so intelligent. 😘" },
+{ id: "7", phone: "9876543210", color:"#fa823177", title:"Dear Love,", bulletin:"You are the last thing on my mind before I go to sleep. 🌓" },
+{ id: "8", phone: "9876543210", color:"#4b658477", title:"And,", bulletin:"You are the first thing in my mind when I wake up. 🌞" },
+{ id: "9", phone: "9876543210", color:"#2d98da77", title:"Everyday I wish,", bulletin:"That I get to hold you in my arms. 🤗" },
+{ id: "10", phone: "9876543210", color:"#eb3b5a77", title:"And,", bulletin:"Kiss you again and again till we get tired. 💋" },
+{ id: "11", phone: "9876543210", color:"#3867d677", title:"I have to say,", bulletin:"I miss you so much.😇" },
+{ id: "12", phone: "9876543210", color:"#a5b1c277", title:"And my dear,", bulletin:"I love you so much.❤️" }
+
+]
 
 
