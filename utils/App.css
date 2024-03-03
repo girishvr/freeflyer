@@ -1,0 +1,35 @@
+
+
+   .sweet_title {
+       color:gray !important; 
+       margin: auto !important; 
+       font-size: 18px !important;
+       font-family: "Segoe UI", 'Roboto', 'Helvetica', 'Arial', 'sans-serif';
+    }
+
+
+ .sweet_message {
+       color:gray !important;  
+       margin: auto !important; 
+       font-size: 18px !important;
+       font-family: "Segoe UI", 'Roboto', 'Helvetica', 'Arial', 'sans-serif';
+       background-color: ivory !important; 
+    }
+
+
+
+.sweet_container {
+       color:gray !important;  
+       margin: auto !important; 
+       font-size: 18px !important;
+       font-family: "Segoe UI", 'Roboto', 'Helvetica', 'Arial', 'sans-serif';
+       background-color: ivory !important; 
+    }
+
+.sweet_title_flyer_alert {
+   color:gray !important; 
+   margin: auto !important; 
+   font-size: 26px !important;
+   padding-top: 40px;
+   font-family: "Segoe UI", 'Roboto', 'Helvetica', 'Arial', 'sans-serif';
+}
