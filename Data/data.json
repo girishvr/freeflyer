@@ -1,0 +1,17 @@
+{ "speakers" : [
+  { 
+    "id":"001" ,
+    "path":"https://jaipurliteraturefestival.org/speaker/aarathi-prasad-4541", 
+    "image_url":"https://jaipurliteraturefestival.org/uploads_jaipurlitfest/speakers/4541-aarathi-prasad.jpg", 
+    "path_speaker":"https://jaipurliteraturefestival.org/speaker/aarathi-prasad-4541",
+    "name":"Aarathi Prasad"
+  },
+  { 
+    "id":"002" ,
+    "path":"https://jaipurliteraturefestival.org/speaker/abhay-k--4661", 
+    "image_url":"https://jaipurliteraturefestival.org/uploads_jaipurlitfest/speakers/4661-abhay-k-.jpg", 
+    "path_speaker":"https://jaipurliteraturefestival.org/speaker/abhay-k--4661",
+    "name":"Abhay K."
+  }
+]
+}
