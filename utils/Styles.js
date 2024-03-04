@@ -21,6 +21,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'ivory',
     alignItems: 'center',
     justifyContent: 'center',
+    width: '100%',
+    height: '100%',
   },
 
   containerOptions: {
